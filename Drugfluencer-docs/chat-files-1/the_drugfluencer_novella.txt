@@ -1,0 +1,256 @@
+THE DRUGFLUENCER
+A Novella by Sam Kriegman
+
+PART ONE: THE SYSTEM
+
+1.
+
+The attention economy functions according to principles more rigorous than those governing traditional markets. Supply is infinite—anyone with a smartphone can produce content—but attention itself remains stubbornly finite. Each human possesses only so many hours, only so much cognitive capacity to be captured and monetized. This fundamental scarcity creates a Darwinian marketplace in which content must evolve toward ever-greater extremity to survive.
+
+Zoe Winters understood this before she understood anything else about what she was doing.
+
+In 2027, the platform known as Flux commanded approximately 3.2 billion active users globally, with average daily usage of 97 minutes per user. This represented a total of 5.19 billion hours of human attention extracted daily from the substrate of lived experience and converted into advertising revenue, data profiles, and behavioral modification. The algorithm that governed content distribution had been trained on eight years of user behavior data, representing the largest dataset of human desire and disgust ever assembled. It knew what made people watch. More precisely, it knew what made people unable to stop watching.
+
+Zoe's early content aligned with what the algorithm had learned to recognize as "authentic harm reduction education." This designation emerged not from human judgment but from pattern recognition: users who watched such content typically engaged for longer sessions, shared more frequently, and demonstrated higher rates of return visits. The algorithm could not determine whether the content actually reduced harm—this question lay outside its domain of competence—but it could determine with statistical certainty that the content performed well according to the metrics that mattered.
+
+What the algorithm learned, Zoe learned. What performed well, she performed more of.
+
+This feedback loop—older than agriculture, more fundamental than language—constituted the invisible architecture of her destruction.
+
+But to say it this way is to absolve everyone involved. And absolution would be inaccurate.
+
+2.
+
+Marcus Hayes loved Zoe Winters the way men in their late twenties love beautiful women who make them feel both necessary and insufficient: intensely, protectively, and with an undercurrent of resentment they mistake for concern.
+
+He was not a bad person. This should be stated clearly at the outset. Bad people are statistically rare; most damage is done by ordinary people operating within systems that reward the wrong things. Marcus worked in UX design for a Berlin-based startup that optimized checkout flows for e-commerce platforms. He understood, professionally, how interfaces could be designed to manipulate behavior. He understood the difference between user agency and the illusion of choice.
+
+Yet somehow he failed to recognize these same mechanisms when they colonized his girlfriend's brain.
+
+Or perhaps he recognized them perfectly well and simply lacked the courage to act on this recognition. Courage, in any case, is overrated as an explanation for human behavior. Most of what appears to be moral cowardice is actually rational calculation performed beneath the level of conscious thought: the weighing of social costs, the preservation of self-image, the avoidance of conflict that might destabilize a comfortable situation.
+
+Marcus wanted Zoe to stop commodifying her drug use. He also wanted to continue living with an increasingly famous girlfriend in a rent-controlled apartment in Kreuzberg. He wanted her to prioritize their relationship over her audience. He also wanted to appear in her videos occasionally, accumulating followers of his own, enjoying the minor celebrity that accrued to him as "Zoe's boyfriend."
+
+The human psyche is large enough to contain these contradictions without experiencing cognitive dissonance. We are not troubled by wanting incompatible things; we are troubled only when forced to choose between them.
+
+For six months, Marcus was not forced to choose.
+
+3.
+
+The Kreuzberg apartment measured forty-two square meters. Zoe paid €890 monthly, having signed the lease in 2025 before the neighborhood fully gentrified. By 2027, comparable units rented for €1,600. This arbitrage—living cheaply in an expensive place—created a sense of having beaten the system, of existing in a privileged bubble where the normal rules didn't apply.
+
+This feeling was intoxicating. It was also an illusion. The rules always applied; they were simply deferred.
+
+Zoe's Flux account, @ZoeWinters, accumulated followers according to a power law distribution typical of attention markets. The first thousand followers took eight months. The second thousand took three months. The fifth thousand took two weeks. By the time she reached 50,000 followers, she was gaining approximately 1,200 new followers daily, compounding at a rate that would have made venture capitalists weep with envy.
+
+Each follower represented a fractional claim on her time, her attention, her self-presentation. Each comment demanded response. Each direct message suggested intimacy, even as the sheer volume made genuine intimacy mathematically impossible. She received, on average, 340 DMs daily. She could read perhaps forty. She could respond meaningfully to perhaps five.
+
+The other 335 accumulated in her inbox like unpaid debts, each one representing a human being who believed, not unreasonably, that their parasocial relationship with her deserved acknowledgment.
+
+She began taking Adderall to manage the workload. This was presented to her followers not as amphetamine abuse but as productivity optimization, life hacking, the kind of cognitive enhancement that ambitious people pursued in competitive environments. San Francisco tech workers did the same thing, she told herself. Investment bankers did the same thing. She was simply applying their methods to her own domain.
+
+This was technically true. The difference—never articulated—was that tech workers and investment bankers performed their Adderall-fueled labor in private. Zoe performed hers on camera, for an audience that grew larger the more visibly she deteriorated.
+
+The algorithm detected the increased posting frequency and rewarded it with greater distribution. Her content appeared more often in the feeds of users who had never heard of her. Her follower count accelerated. Her income—derived from advertising revenue, brand partnerships, and subscription tiers—increased proportionally.
+
+By any conventional metric, she was succeeding.
+
+4.
+
+The intervention took place on a Thursday afternoon in March 2028. Marcus had spent three weeks planning it, consulting resources about how to confront a loved one about substance abuse, coordinating schedules with Hannah (Zoe's university friend, a social worker) and Max (Marcus's friend, who had lost a brother to heroin and carried an evangelical's certainty about the one true path to recovery).
+
+What Marcus did not plan for was Zoe's capacity to reframe the intervention as content.
+
+He recorded it—this was the first betrayal—because he wanted her to see herself later, when she was sober. The therapeutic literature suggested this. Addicts often denied the severity of their condition; video evidence could pierce denial.
+
+What the therapeutic literature had not anticipated was a subject who would immediately recognize the documentary potential of her own intervention, who would seize the footage and edit it into a narrative of persecution, who would post it to 127,000 followers with a caption that reframed her drug use as brave truth-telling and her loved ones' concern as oppressive gatekeeping.
+
+The video accumulated 6.3 million views in seventy-two hours.
+
+The comments section became a referendum on personal autonomy, harm reduction politics, the right to self-medicate, the nature of addiction, the role of friends and family in crisis intervention, and whether recording someone without their consent constituted a greater betrayal than posting that recording publicly.
+
+Both sides were correct. This is usually the case in political discourse.
+
+What neither side addressed: the economic logic that had led to this moment. Zoe's income from Flux had reached €4,800 monthly—more than she had ever earned through legitimate employment. The intervention video alone generated approximately €1,200 in advertising revenue, distributed between Zoe (55%), Flux (45%), and various intermediaries who served ads against content depicting human suffering.
+
+Marcus, Hannah, and Max appeared in this video without compensation. Their emotional labor was extracted and monetized without their consent. They had become, in the language of content creation, "supporting characters" in someone else's narrative.
+
+This might have been forgivable if it had served some purpose beyond profit. But the video did not help anyone recover from addiction. It did not illuminate the mechanisms of intervention or the nature of care. It transformed a private moment of genuine concern into public spectacle, flattening the complexity of love into a simple narrative: controlling boyfriend vs. independent woman.
+
+The market had spoken. The independent woman narrative was more engaging.
+
+One week later, Zoe moved to London.
+
+5.
+
+Alex Chen managed fourteen influencers from a serviced office in Shoreditch. They specialized in what they called "authentic lifestyle content," which meant content creators who monetized the appearance of not monetizing, who sold products by appearing not to sell, who built brands around the performance of not having a brand.
+
+Alex was thirty-two, had worked in digital marketing for nine years, and possessed the particular moral flexibility required to succeed in the attention economy: not sociopathic indifference but rather a sincere belief that helping people monetize themselves constituted a form of empowerment.
+
+They had been following Zoe's account for four months, watching her follower count climb, noting the engagement rates that surpassed industry benchmarks by factors of three or four. The intervention video confirmed what Alex already suspected: Zoe Winters was a generational talent at converting personal destruction into compelling content.
+
+The email Alex sent her was professionally warm, carefully calibrated:
+
+*Hi Zoe – I've been following your work and I'm consistently impressed by your authenticity and the community you've built. I work with creators who are ready to take their content to the next level, and I think you have massive untapped potential. Would you be open to a conversation about what professional management could do for your brand?*
+
+Zoe responded within forty minutes.
+
+They spoke via video call the next day. Alex's pitch was elegant in its simplicity: You're already doing the work. You're already creating the content. You're already putting yourself out there. Why not get properly compensated for it?
+
+The word "properly" did significant work in this sentence. It implied that Zoe's current compensation was improper, inadequate, beneath her value. It suggested that someone was profiting from her labor—true—and that this someone should be her—partially true, though it elided the question of who else would profit from the arrangement.
+
+Alex proposed a standard management contract: 20% of all revenue in exchange for brand partnerships, speaking engagements, strategic content planning, crisis management, and "holistic career development." The contract included a clause stipulating that Alex maintained final approval over all content distribution, ostensibly to protect Zoe from posting material that might damage her brand.
+
+Zoe signed the contract without reading it carefully. This was not unusual. Most people do not read contracts carefully. They sign based on trust, on the performance of trustworthiness, on the desire to believe that someone understands their interests and will protect them.
+
+Alex did understand Zoe's interests. They simply understood other interests more precisely.
+
+6.
+
+London was more expensive than Berlin but generated more revenue. The economic logic was straightforward: English-language content accessed larger markets, premium brands paid more for UK-based influencers, and the city itself provided better backdrops for the kind of aspirational lifestyle content that attracted fashion and wellness partnerships.
+
+Alex secured Zoe a brand deal with a "functional beverage" company in her second week. The product contained L-theanine, ashwagandha, and enough caffeine to simulate focus without triggering jitters. It was marketed as "plant-based cognitive enhancement" and cost £4.50 per can.
+
+Zoe was required to mention the product organically in three videos per month and post one dedicated review. For this, she received £2,200 monthly, plus a performance bonus if sales attributed to her unique referral code exceeded baseline projections.
+
+The beverage tasted like carbonated grass clippings. Zoe drank it on camera and described it as "genuinely helpful for staying present during long creative sessions." This was not technically a lie—the caffeine did help her stay awake—but it was not technically the truth either.
+
+She had begun to understand that the truth was beside the point. What mattered was the performance of truth, the aesthetic of authenticity.
+
+Alex taught her this without teaching it explicitly. They simply edited her content differently than she had edited it herself: tighter cuts, better color grading, strategic deployment of vulnerability at moments calculated to maximize emotional impact.
+
+"You're a natural storyteller," Alex told her after posting a video about her difficulty sleeping without Xanax. "The key is to structure that storytelling for maximum resonance."
+
+The video performed exceptionally well. It generated 840,000 views and 12,400 comments, most of them expressing parasocial concern or sharing personal experiences with sleep medication. Several pharmaceutical brands approached Alex about potential partnerships.
+
+Zoe felt proud of this. She felt that she was helping people feel less alone. She felt that she was contributing to destigmatization.
+
+She did not feel—or did not allow herself to feel—that she was performing illness for profit, that her insomnia might be partially caused by the Adderall she took to maintain her posting schedule, or that the attention she received for discussing her pharmaceutical dependence might be incentivizing her to remain dependent.
+
+These were uncomfortable thoughts. The attention economy does not reward uncomfortable thoughts.
+
+It rewards content that generates engagement. And suffering, it turns out, generates engagement more reliably than almost anything else.
+
+7.
+
+Marcus watched all of this from Berlin.
+
+He had promised himself he would stop following her account. He had promised himself many things. Promises made to oneself are the easiest to break; there is no external enforcement mechanism, no social penalty for failure.
+
+Each night, he opened Flux. Each night, he watched her new videos. He told himself this was concern, that he was monitoring her wellbeing from a distance, ready to intervene if things got too bad.
+
+He did not intervene. Things got worse.
+
+By May, Zoe was posting content from nightclubs in Shoreditch, visibly on cocaine, performing the kind of glamorous hedonism that attracted fashion brands and alarmed the segment of her audience that had followed her for harm reduction education.
+
+Her follower count continued to climb: 180,000, then 230,000, then 310,000.
+
+Her comment sections bifurcated into two camps: enthusiastic enablers who celebrated her freedom and authenticity, and concerned observers who begged her to get help. Both camps drove engagement. Both camps made her more visible to the algorithm.
+
+Alex monitored these metrics carefully and adjusted content strategy accordingly. When "wellness-focused" content underperformed, they suggested Zoe lean into the party lifestyle. When harm reduction content attracted too much criticism, they recommended a "balanced approach" that showcased both education and experience.
+
+The result was a content strategy that maximized revenue while creating plausible deniability about its fundamental purpose: to monetize a young woman's accelerating drug addiction.
+
+Marcus understood this. He possessed sufficient media literacy to recognize manipulation when he saw it. He could have spoken up. He could have contacted Zoe directly, could have reached out to Hannah or Max, could have attempted another intervention.
+
+Instead, he screenshot particularly concerning videos and sent them to group chats with friends, accompanied by messages like "This is really bad" and "Someone should do something."
+
+Someone. Not him. Someone.
+
+The passive construction absolved him of agency. If tragedy was inevitable—and he had convinced himself it was inevitable—then his role was merely to witness, to document, to feel appropriate concern without taking inappropriate action.
+
+This is a common form of moral reasoning. We see it everywhere: in colleagues who recognize workplace harassment but don't report it, in citizens who observe injustice but don't protest it, in family members who know someone is in danger but don't want to make things awkward.
+
+Marcus didn't want to make things awkward.
+
+By the time Zoe moved to Los Angeles in July, Marcus had accumulated 43,000 followers on his own account—gained primarily through his association with her, through tags in her old videos, through people who wanted to understand the boyfriend who had appeared briefly in her origin story.
+
+He posted occasionally: photographs of Berlin architecture, thoughts about design, the performative minimalism that signaled taste and cultural capital.
+
+He never posted about Zoe. But people commented about her constantly.
+
+"How is she doing?" they would ask. "Do you still talk?" "You should reach out to her." "Someone needs to help her."
+
+Someone. Not them. Someone.
+
+Marcus never responded to these comments. He simply let them accumulate, let them create the impression of a person burdened by care, constrained by circumstances beyond his control.
+
+It was a good performance. He almost believed it himself.
+
+8.
+
+Los Angeles was where the performance began to collapse.
+
+The architecture of the city made this inevitable. Unlike Berlin's density or London's infrastructure, LA was designed for isolation: vast distances between locations, automobile dependence, the atomization of social life into private spaces. It was possible to be surrounded by millions of people and encounter none of them.
+
+Zoe rented an apartment in Silver Lake—technically a sublet from an influencer who had moved to Austin for tax reasons. The space was aesthetically optimized for content creation: floor-to-ceiling windows, minimalist furniture, succulents arranged with studied casualness.
+
+It looked like a life. It was a set.
+
+Alex had secured her two brand partnerships: a wellness supplement company and a sustainable fashion brand. Both deals required her to maintain certain image standards—"healthy lifestyle choices," "mindful consumption"—which created an increasingly difficult tension with her actual behavior.
+
+She was taking Adderall daily now, sometimes twice daily. She was drinking more—not for content, just for maintenance, to smooth the amphetamine edge. She was using cocaine socially, which in Los Angeles meant frequently, which meant her septum was deteriorating, which meant she was switching to smoking it, which meant she was crossing a threshold that even she recognized as significant.
+
+She discussed none of this with her followers.
+
+Instead, her content became more carefully curated, more professionally produced, less authentic even as it claimed greater authenticity. Alex had hired an editor to handle post-production, a photographer to capture lifestyle content, a scheduling tool to optimize posting times.
+
+Zoe's job was simply to live, to perform living, to document experiences that could be packaged and distributed.
+
+The problem: her actual experiences were increasingly undocumentable.
+
+There were nights she couldn't remember. Mornings she woke up not knowing where she was. Bruises she couldn't explain. A growing sense that she was being operated remotely, that some other version of herself was making decisions while she watched from inside her own skull.
+
+In September, she missed a sponsored post deadline for the first time. Alex sent concerned messages. Zoe apologized, promised it wouldn't happen again, delivered the content eighteen hours late.
+
+The brand threatened to terminate the partnership. Alex negotiated an extension but reduced rates.
+
+Zoe's income decreased by 30% in a single month.
+
+This created panic. Not moral panic about her health—though she did feel that, occasionally, in quiet moments—but economic panic about her sustainability as a business entity.
+
+She needed to produce more content. Better content. Content that would justify premium brand rates.
+
+Alex suggested a "raw authenticity" pivot: documenting her struggles with mental health, her difficulty maintaining the lifestyle she portrayed, the gap between image and reality.
+
+"People connect with vulnerability," Alex explained. "The wellness brands might pull out, but you'll attract a different demographic. More engaged. More loyal."
+
+What Alex didn't say: more profitable. Suffering sold better than success. Decline attracted more attention than achievement.
+
+Zoe agreed to the strategy without fully understanding it.
+
+Her next video was titled "I'm Not Okay." She filmed it in her apartment at 3 AM, without makeup, crying intermittently, discussing her anxiety and insomnia and the pressure of maintaining a public persona.
+
+She did not mention the cocaine or the Xanax or the Adderall or the fact that she was crying partly because she was coming down and partly because she had just checked her bank account and realized she had spent $3,400 on drugs in the past month.
+
+She mentioned "struggling with substances" in vague terms that could be interpreted as past tense.
+
+The video generated 1.9 million views in forty-eight hours.
+
+The comments were overwhelmingly supportive: "Thank you for being real." "This is so brave." "We love you no matter what." "Please take care of yourself."
+
+Zoe read these comments and felt simultaneously validated and hollow. The attention felt good. The dishonesty felt corrosive.
+
+But the analytics were clear: this kind of content performed exceptionally well.
+
+Alex suggested a follow-up video: "Getting Help." Zoe would document her journey toward recovery, her commitment to therapy, her decision to take a brief hiatus from posting.
+
+She would not actually take a hiatus. She would simply say she was taking a hiatus while continuing to post "recovery journey" content.
+
+Zoe agreed to this too.
+
+She was no longer making decisions so much as consenting to suggestions, following a script written by incentive structures she had helped create but could no longer control.
+
+The algorithm had trained her completely.
+
+What came next was inevitable in the way all tragedies are inevitable in retrospect: not predetermined but rather the logical conclusion of systems functioning exactly as designed.
+
+[END OF PART ONE]
+
+---
+
+PART TWO: THE BOYFRIEND
+
+[Marcus Hayes sits in a Brooklyn loft, telling his version of events to a documentary filmmaker he will later regret trusting...]
+
+[TO BE CONTINUED]
