@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE DRUGFLUENCER - Content Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            font-style: italic;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            margin-top: 20px;
+            opacity: 0.85;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 3px solid #667eea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2a5298;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: white;
+            border: 2px solid #667eea;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #2a5298;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .card h4 {
+            color: #2a5298;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .card a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .card a:hover {
+            background: #2a5298;
+            transform: scale(1.05);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .status-complete {
+            background: #28a745;
+            color: white;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+
+        footer {
+            background: #2a5298;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .file-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .file-list ul {
+            list-style: none;
+        }
+
+        .file-list li {
+            padding: 10px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .file-list li:last-child {
+            border-bottom: none;
+        }
+
+        .file-list a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .file-list a:hover {
+            color: #667eea;
+        }
+
+        .file-icon {
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 4px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>THE DRUGFLUENCER</h1>
+            <p class="tagline">"I'd rather die famous than live invisible."</p>
+            <p class="subtitle">A multi-format narrative exploring algorithmic exploitation, influencer culture, and distributed complicity</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#screenplays">Screenplays</a></li>
+                <li><a href="#novellas">Novellas</a></li>
+                <li><a href="#interactive">Interactive</a></li>
+                <li><a href="#visual">Visual/Storyboards</a></li>
+                <li><a href="#planning">Planning Docs</a></li>
+                <li><a href="#all-files">All Files</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <section id="overview">
+                <div class="intro">
+                    <h2>About The Project</h2>
+                    <p>The Drugfluencer is a multi-format narrative project that tells the story of Zoe Winters, a drug-positive influencer whose "authentic" content about harm reduction slowly becomes the content that kills her. The project explores themes of algorithmic exploitation, creator culture, distributed complicity, and the attention economy through multiple narrative formats: feature screenplay, novellas, short films, interactive choose-your-own-adventure, and visual storyboards.</p>
+                    <p><strong>Core Concept:</strong> A four-act documentary-within-a-documentary about distributed complicity. Flux Technologies developed "Project Cassandra"—a predictive analytics program that forecasts creator mortality and optimizes it for revenue. The genius of the system: no single person commits murder. Everyone just follows incentives. The death emerges from the optimization itself.</p>
+                </div>
+            </section>
+
+            <section id="screenplays">
+                <h2>📽️ Screenplays & Scripts <span class="status-badge status-complete">Complete</span></h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Feature Screenplay v1</h4>
+                        <p>Full-length feature screenplay. Four-act structure following Marcus (boyfriend), Alex (manager), Jay (dealer), and the family. 663 lines of intense narrative.</p>
+                        <a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay-v1.txt" target="_blank">Read Screenplay</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>Fountain Format</h4>
+                        <p>Professional screenplay format in .fountain for industry-standard formatting software.</p>
+                        <a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay.fountain" target="_blank">Download Fountain</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>Short Film: "47 Seconds"</h4>
+                        <p>A 4:47 minute vertical-friendly short film. The entire story structured around ONE damning detail: the 47 seconds Alex watched before calling 911.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Scripts/Short_47_Seconds.md" target="_blank">Read Short Script</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>Short Film: "47 Seconds" (Alt)</h4>
+                        <p>Alternative version with detailed shot-by-shot breakdown and technical specifications.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Scripts/Short_Film_47_Seconds.md" target="_blank">Read Alt Version</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="novellas">
+                <h2>📚 Novellas & Prose <span class="status-badge status-complete">Complete</span></h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>The Drugfluencer Novella</h4>
+                        <p>Original four-voice novella. 256 lines of Denis Johnson-style damaged clarity meets modern digital horror.</p>
+                        <a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_novella.txt" target="_blank">Read Novella</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>THE DIARY (New Yorker Story)</h4>
+                        <p>Shorter version told from Diane's (mother's) perspective as she discovers Zoe's private journals. Literary fiction format suitable for publication.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Story.md" target="_blank">Read Short Story</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>THE DIARY (Full Length)</h4>
+                        <p>Extended 8,400-word version. A mother cleaning out her dead daughter's apartment discovers handwritten journals—the only part of Zoe's life that wasn't content.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Full_Length.md" target="_blank">Read Full Story</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="interactive">
+                <h2>🎮 Interactive Narratives <span class="status-badge status-complete">Complete</span></h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Choose Your Own Adventure</h4>
+                        <p>Complete interactive narrative playable from 5 perspectives (Marcus, Alex, Jay, Rebecca, and unlockable Zoe). Features multiple endings and moral complexity. The system is designed so most paths lead to the same destination.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Choose_Your_Own_Adventure.md" target="_blank">Explore CYOA</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>Decision Points & Branching</h4>
+                        <p>Detailed analysis of 7 major pivot points in the narrative. Shows how individual choices feel meaningful but are constrained by structural incentives.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Decision_Points.md" target="_blank">View Decision Map</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>Plot Architecture</h4>
+                        <p>Complete plot structure and conspiracy explanation. Master reference document showing how Project Cassandra works and the four-act documentary structure.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Plot_Map.md" target="_blank">Read Plot Map</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="visual">
+                <h2>🎨 Visual & Storyboards <span class="status-badge status-complete">Complete</span></h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Storyboard Prompts (Standard)</h4>
+                        <p>AI image generation prompts for every major scene. Documentary aesthetic meets European art-film melancholy.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts.md" target="_blank">View Prompts</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>Storyboard Prompts (Cinematic)</h4>
+                        <p>Lynch/Safdie/Wong Kar-Wai inspired visual prompts. Sweaty close-ups, neon-noir aesthetics, and intimate handheld work.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Cinematic.md" target="_blank">View Cinematic</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>Storyboard Prompts (Nihonga)</h4>
+                        <p>Japanese Nihonga painting style prompts. Traditional Japanese art aesthetics applied to modern digital horror.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Nihonga.md" target="_blank">View Nihonga</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="planning">
+                <h2>📋 Planning & Development Docs <span class="status-badge status-complete">Complete</span></h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Git Repository Plan</h4>
+                        <p>Complete recommended directory structure, file naming conventions, branch strategy, and workflow recommendations for the project.</p>
+                        <a href="Drugfluencer-docs/THE_DRUGFLUENCER_Git_Repo_Plan.md" target="_blank">Read Repo Plan</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>Git Plan (Chat Files)</h4>
+                        <p>Alternative version from chat-files-2 with additional development notes.</p>
+                        <a href="Drugfluencer-docs/chat-files-2/Git_Repo_Plan.md" target="_blank">Read Alt Plan</a>
+                    </div>
+
+                    <div class="card">
+                        <h4>Original Claude Chat</h4>
+                        <p>The original conversation that started it all. Full development history and creative process.</p>
+                        <a href="Drugfluencer-docs/Screenplay about drug-positive influencer - Claude.html" target="_blank">View Original Chat</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="all-files">
+                <h2>📁 Complete File Directory</h2>
+
+                <div class="file-list">
+                    <h3>Screenplays & Scripts</h3>
+                    <ul>
+                        <li><a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay-v1.txt"><span class="file-icon"></span>the_drugfluencer_screenplay-v1.txt</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay.fountain"><span class="file-icon"></span>the_drugfluencer_screenplay.fountain</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Scripts/the_drugfluencer_screenplay-v1.txt"><span class="file-icon"></span>Scripts/the_drugfluencer_screenplay-v1.txt (duplicate)</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Scripts/Short_47_Seconds.md"><span class="file-icon"></span>Scripts/Short_47_Seconds.md</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Scripts/Short_Film_47_Seconds.md"><span class="file-icon"></span>Scripts/Short_Film_47_Seconds.md</a></li>
+                    </ul>
+
+                    <h3>Novellas & Stories</h3>
+                    <ul>
+                        <li><a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_novella.txt"><span class="file-icon"></span>the_drugfluencer_novella.txt</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Novellas/the_drugfluencer_novella.txt"><span class="file-icon"></span>Novellas/the_drugfluencer_novella.txt (duplicate)</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Story.md"><span class="file-icon"></span>Novellas/THE_DIARY_New_Yorker_Story.md</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Full_Length.md"><span class="file-icon"></span>Novellas/THE_DIARY_New_Yorker_Full_Length.md</a></li>
+                    </ul>
+
+                    <h3>Interactive & Game Design</h3>
+                    <ul>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Choose_Your_Own_Adventure.md"><span class="file-icon"></span>Choose_Your_Own_Adventure.md</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Decision_Points.md"><span class="file-icon"></span>Decision_Points.md</a></li>
+                    </ul>
+
+                    <h3>Plot & Structure</h3>
+                    <ul>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Plot_Map.md"><span class="file-icon"></span>Plot_Map.md</a></li>
+                    </ul>
+
+                    <h3>Visual & Storyboards</h3>
+                    <ul>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts.md"><span class="file-icon"></span>Storyboard_Prompts.md</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Cinematic.md"><span class="file-icon"></span>Storyboard_Prompts_Cinematic.md</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Nihonga.md"><span class="file-icon"></span>Storyboard_Prompts_Nihonga.md</a></li>
+                    </ul>
+
+                    <h3>Planning & Documentation</h3>
+                    <ul>
+                        <li><a href="Drugfluencer-docs/THE_DRUGFLUENCER_Git_Repo_Plan.md"><span class="file-icon"></span>THE_DRUGFLUENCER_Git_Repo_Plan.md</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-2/Git_Repo_Plan.md"><span class="file-icon"></span>Git_Repo_Plan.md</a></li>
+                        <li><a href="Drugfluencer-docs/Screenplay about drug-positive influencer - Claude.html"><span class="file-icon"></span>Original Claude Chat.html</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p><strong>THE DRUGFLUENCER</strong></p>
+            <p>A multi-format narrative project exploring algorithmic exploitation and distributed complicity</p>
+            <p style="margin-top: 20px; opacity: 0.8;">All content available for review and collaboration</p>
+        </footer>
+    </div>
+</body>
+</html>
