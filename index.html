@@ -3,207 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE DRUGFLUENCER - Content Hub</title>
+    <title>THE DRUGFLUENCER</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #000;
+            --secondary: #fff;
+            --accent: #ff3366;
+            --text: #1a1a1a;
+            --text-light: #666;
+            --border: #e0e0e0;
+            --bg: #fafafa;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
+            max-width: 100%;
+            position: relative;
         }
 
         header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 80px 60px;
+            border-bottom: 4px solid var(--accent);
         }
 
         h1 {
-            font-size: 3.5em;
+            font-size: clamp(3rem, 8vw, 7rem);
             font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: -0.03em;
+            line-height: 0.95;
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
         .tagline {
-            font-size: 1.2em;
-            font-style: italic;
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-weight: 300;
+            letter-spacing: 0.02em;
             opacity: 0.9;
-            margin-top: 10px;
+            margin-top: 20px;
+            font-style: italic;
         }
 
         .subtitle {
-            font-size: 1.1em;
-            margin-top: 20px;
-            opacity: 0.85;
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            margin-top: 30px;
+            font-weight: 400;
+            opacity: 0.7;
+            max-width: 800px;
         }
 
         nav {
-            background: #f8f9fa;
-            padding: 20px;
-            border-bottom: 3px solid #667eea;
+            background: var(--secondary);
+            padding: 0 60px;
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
         }
 
         nav ul {
             list-style: none;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+            gap: 0;
+        }
+
+        nav li {
+            flex: 1;
+            min-width: 120px;
         }
 
         nav a {
+            display: block;
             text-decoration: none;
-            color: #2a5298;
-            padding: 10px 20px;
-            border-radius: 8px;
-            background: white;
-            border: 2px solid #667eea;
-            transition: all 0.3s;
+            color: var(--text);
+            padding: 24px 20px;
             font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s ease;
+            text-align: center;
         }
 
         nav a:hover {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            border-bottom-color: var(--accent);
+            color: var(--accent);
         }
 
         .content {
-            padding: 40px;
+            padding: 60px;
+            max-width: 1600px;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .content.shifted {
+            transform: translateX(-40%);
         }
 
         section {
-            margin-bottom: 50px;
+            margin-bottom: 100px;
         }
 
         h2 {
-            color: #2a5298;
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
         }
 
         h3 {
-            color: #667eea;
-            font-size: 1.5em;
-            margin: 25px 0 15px 0;
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            font-weight: 800;
+            margin: 40px 0 20px 0;
+            letter-spacing: -0.01em;
         }
 
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 12px;
-            padding: 25px;
-            border-left: 5px solid #667eea;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
         }
 
         .card h4 {
-            color: #2a5298;
-            font-size: 1.3em;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
         }
 
         .card p {
-            color: #666;
-            margin-bottom: 15px;
-            font-size: 0.95em;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
 
         .card a {
             display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 14px 28px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
         }
 
         .card a:hover {
-            background: #2a5298;
-            transform: scale(1.05);
+            background: var(--secondary);
+            color: var(--primary);
         }
 
         .status-badge {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            font-weight: 600;
-            margin-left: 10px;
-        }
-
-        .status-complete {
-            background: #28a745;
-            color: white;
+            padding: 6px 14px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            margin-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: var(--accent);
+            color: var(--secondary);
         }
 
         .intro {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border-left: 5px solid #ff6b6b;
+            background: var(--secondary);
+            padding: 60px;
+            margin-bottom: 60px;
+            border-left: 6px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .intro h2::after {
+            display: none;
         }
 
         .intro p {
-            font-size: 1.1em;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
             line-height: 1.8;
-            color: #2c3e50;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .intro strong {
+            font-weight: 800;
+            color: var(--primary);
         }
 
         footer {
-            background: #2a5298;
-            color: white;
+            background: var(--primary);
+            color: var(--secondary);
             text-align: center;
-            padding: 30px;
-            margin-top: 40px;
+            padding: 80px 60px;
+            margin-top: 100px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 10px 0;
+        }
+
+        footer p:first-child {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            opacity: 1;
+            margin-bottom: 20px;
         }
 
         .file-list {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 15px;
+            background: var(--secondary);
+            padding: 40px;
+            margin-top: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .file-list h3 {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .file-list ul {
@@ -211,8 +300,8 @@
         }
 
         .file-list li {
-            padding: 10px;
-            border-bottom: 1px solid #dee2e6;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
         }
 
         .file-list li:last-child {
@@ -220,31 +309,192 @@
         }
 
         .file-list a {
-            color: #2a5298;
+            color: var(--text);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            transition: all 0.2s ease;
         }
 
         .file-list a:hover {
-            color: #667eea;
+            color: var(--accent);
+            transform: translateX(5px);
         }
 
         .file-icon {
-            width: 20px;
-            height: 20px;
-            background: #667eea;
-            border-radius: 4px;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
             display: inline-block;
+        }
+
+        /* Side Panel Styles */
+        .side-panel {
+            position: fixed;
+            top: 0;
+            right: -80%;
+            width: 80%;
+            height: 100vh;
+            background: var(--secondary);
+            box-shadow: -10px 0 50px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+        }
+
+        .side-panel.open {
+            right: 0;
+        }
+
+        .side-panel-header {
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 40px 60px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .side-panel-title {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+
+        .close-panel {
+            background: none;
+            border: none;
+            color: var(--secondary);
+            font-size: 2.5rem;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            font-weight: 300;
+        }
+
+        .close-panel:hover {
+            color: var(--accent);
+            transform: rotate(90deg);
+        }
+
+        .side-panel-content {
+            padding: 60px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+        }
+
+        .side-panel-content pre {
+            background: #f5f5f5;
+            padding: 30px;
+            overflow-x: auto;
+            border-left: 4px solid var(--accent);
+            margin: 30px 0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .side-panel-content h1,
+        .side-panel-content h2,
+        .side-panel-content h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .side-panel-content p {
+            margin-bottom: 20px;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 30px;
+            }
+
+            nav {
+                padding: 0 20px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .side-panel {
+                width: 100%;
+                right: -100%;
+            }
+
+            .side-panel-header {
+                padding: 30px;
+            }
+
+            .side-panel-content {
+                padding: 30px;
+            }
+
+            .intro {
+                padding: 30px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="overlay" onclick="closeSidePanel()"></div>
+
+    <div class="side-panel" id="sidePanel">
+        <div class="side-panel-header">
+            <div class="side-panel-title" id="panelTitle">Loading...</div>
+            <button class="close-panel" onclick="closeSidePanel()">&times;</button>
+        </div>
+        <div class="side-panel-content" id="panelContent">
+            <div class="loading">Loading content...</div>
+        </div>
+    </div>
+
     <div class="container">
         <header>
-            <h1>THE DRUGFLUENCER</h1>
+            <h1>THE<br>DRUG­FLUENCER</h1>
             <p class="tagline">"I'd rather die famous than live invisible."</p>
             <p class="subtitle">A multi-format narrative exploring algorithmic exploitation, influencer culture, and distributed complicity</p>
         </header>
@@ -255,13 +505,13 @@
                 <li><a href="#screenplays">Screenplays</a></li>
                 <li><a href="#novellas">Novellas</a></li>
                 <li><a href="#interactive">Interactive</a></li>
-                <li><a href="#visual">Visual/Storyboards</a></li>
-                <li><a href="#planning">Planning Docs</a></li>
-                <li><a href="#all-files">All Files</a></li>
+                <li><a href="#visual">Visual</a></li>
+                <li><a href="#planning">Planning</a></li>
+                <li><a href="#all-files">Files</a></li>
             </ul>
         </nav>
 
-        <div class="content">
+        <div class="content" id="mainContent">
             <section id="overview">
                 <div class="intro">
                     <h2>About The Project</h2>
@@ -271,185 +521,238 @@
             </section>
 
             <section id="screenplays">
-                <h2>📽️ Screenplays & Scripts <span class="status-badge status-complete">Complete</span></h2>
+                <h2>Screenplays<br>& Scripts <span class="status-badge">Complete</span></h2>
 
                 <div class="card-grid">
                     <div class="card">
-                        <h4>Feature Screenplay v1</h4>
+                        <h4>Feature<br>Screenplay</h4>
                         <p>Full-length feature screenplay. Four-act structure following Marcus (boyfriend), Alex (manager), Jay (dealer), and the family. 663 lines of intense narrative.</p>
-                        <a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay-v1.txt" target="_blank">Read Screenplay</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay-v1.txt', 'Feature Screenplay v1'); return false;">Read</a>
                     </div>
 
                     <div class="card">
-                        <h4>Fountain Format</h4>
+                        <h4>Fountain<br>Format</h4>
                         <p>Professional screenplay format in .fountain for industry-standard formatting software.</p>
-                        <a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay.fountain" target="_blank">Download Fountain</a>
+                        <a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay.fountain" download>Download</a>
                     </div>
 
                     <div class="card">
-                        <h4>Short Film: "47 Seconds"</h4>
+                        <h4>47<br>Seconds</h4>
                         <p>A 4:47 minute vertical-friendly short film. The entire story structured around ONE damning detail: the 47 seconds Alex watched before calling 911.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Scripts/Short_47_Seconds.md" target="_blank">Read Short Script</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Scripts/Short_47_Seconds.md', '47 Seconds'); return false;">Read</a>
                     </div>
 
                     <div class="card">
-                        <h4>Short Film: "47 Seconds" (Alt)</h4>
+                        <h4>47 Seconds<br>Alt Version</h4>
                         <p>Alternative version with detailed shot-by-shot breakdown and technical specifications.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Scripts/Short_Film_47_Seconds.md" target="_blank">Read Alt Version</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Scripts/Short_Film_47_Seconds.md', '47 Seconds Alt'); return false;">Read</a>
                     </div>
                 </div>
             </section>
 
             <section id="novellas">
-                <h2>📚 Novellas & Prose <span class="status-badge status-complete">Complete</span></h2>
+                <h2>Novellas<br>& Prose <span class="status-badge">Complete</span></h2>
 
                 <div class="card-grid">
                     <div class="card">
-                        <h4>The Drugfluencer Novella</h4>
+                        <h4>The<br>Novella</h4>
                         <p>Original four-voice novella. 256 lines of Denis Johnson-style damaged clarity meets modern digital horror.</p>
-                        <a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_novella.txt" target="_blank">Read Novella</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-1/the_drugfluencer_novella.txt', 'The Drugfluencer Novella'); return false;">Read</a>
                     </div>
 
                     <div class="card">
-                        <h4>THE DIARY (New Yorker Story)</h4>
+                        <h4>The Diary<br>Short</h4>
                         <p>Shorter version told from Diane's (mother's) perspective as she discovers Zoe's private journals. Literary fiction format suitable for publication.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Story.md" target="_blank">Read Short Story</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Story.md', 'The Diary - Short Story'); return false;">Read</a>
                     </div>
 
                     <div class="card">
-                        <h4>THE DIARY (Full Length)</h4>
+                        <h4>The Diary<br>Full</h4>
                         <p>Extended 8,400-word version. A mother cleaning out her dead daughter's apartment discovers handwritten journals—the only part of Zoe's life that wasn't content.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Full_Length.md" target="_blank">Read Full Story</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Full_Length.md', 'The Diary - Full Length'); return false;">Read</a>
                     </div>
                 </div>
             </section>
 
             <section id="interactive">
-                <h2>🎮 Interactive Narratives <span class="status-badge status-complete">Complete</span></h2>
+                <h2>Interactive<br>Narratives <span class="status-badge">Complete</span></h2>
 
                 <div class="card-grid">
                     <div class="card">
-                        <h4>Choose Your Own Adventure</h4>
-                        <p>Complete interactive narrative playable from 5 perspectives (Marcus, Alex, Jay, Rebecca, and unlockable Zoe). Features multiple endings and moral complexity. The system is designed so most paths lead to the same destination.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Choose_Your_Own_Adventure.md" target="_blank">Explore CYOA</a>
+                        <h4>Choose Your<br>Own Adventure</h4>
+                        <p>Complete interactive narrative playable from 5 perspectives (Marcus, Alex, Jay, Rebecca, and unlockable Zoe). Features multiple endings and moral complexity.</p>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Choose_Your_Own_Adventure.md', 'Choose Your Own Adventure'); return false;">Explore</a>
                     </div>
 
                     <div class="card">
-                        <h4>Decision Points & Branching</h4>
+                        <h4>Decision<br>Points</h4>
                         <p>Detailed analysis of 7 major pivot points in the narrative. Shows how individual choices feel meaningful but are constrained by structural incentives.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Decision_Points.md" target="_blank">View Decision Map</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Decision_Points.md', 'Decision Points'); return false;">Read</a>
                     </div>
 
                     <div class="card">
-                        <h4>Plot Architecture</h4>
+                        <h4>Plot<br>Architecture</h4>
                         <p>Complete plot structure and conspiracy explanation. Master reference document showing how Project Cassandra works and the four-act documentary structure.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Plot_Map.md" target="_blank">Read Plot Map</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Plot_Map.md', 'Plot Architecture'); return false;">Read</a>
                     </div>
                 </div>
             </section>
 
             <section id="visual">
-                <h2>🎨 Visual & Storyboards <span class="status-badge status-complete">Complete</span></h2>
+                <h2>Visual &<br>Storyboards <span class="status-badge">Complete</span></h2>
 
                 <div class="card-grid">
                     <div class="card">
-                        <h4>Storyboard Prompts (Standard)</h4>
+                        <h4>Storyboard<br>Prompts</h4>
                         <p>AI image generation prompts for every major scene. Documentary aesthetic meets European art-film melancholy.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts.md" target="_blank">View Prompts</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts.md', 'Storyboard Prompts'); return false;">View</a>
                     </div>
 
                     <div class="card">
-                        <h4>Storyboard Prompts (Cinematic)</h4>
+                        <h4>Cinematic<br>Style</h4>
                         <p>Lynch/Safdie/Wong Kar-Wai inspired visual prompts. Sweaty close-ups, neon-noir aesthetics, and intimate handheld work.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Cinematic.md" target="_blank">View Cinematic</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Cinematic.md', 'Cinematic Prompts'); return false;">View</a>
                     </div>
 
                     <div class="card">
-                        <h4>Storyboard Prompts (Nihonga)</h4>
+                        <h4>Nihonga<br>Style</h4>
                         <p>Japanese Nihonga painting style prompts. Traditional Japanese art aesthetics applied to modern digital horror.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Nihonga.md" target="_blank">View Nihonga</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Nihonga.md', 'Nihonga Prompts'); return false;">View</a>
                     </div>
                 </div>
             </section>
 
             <section id="planning">
-                <h2>📋 Planning & Development Docs <span class="status-badge status-complete">Complete</span></h2>
+                <h2>Planning &<br>Development <span class="status-badge">Complete</span></h2>
 
                 <div class="card-grid">
                     <div class="card">
-                        <h4>Git Repository Plan</h4>
+                        <h4>Git Repository<br>Plan</h4>
                         <p>Complete recommended directory structure, file naming conventions, branch strategy, and workflow recommendations for the project.</p>
-                        <a href="Drugfluencer-docs/THE_DRUGFLUENCER_Git_Repo_Plan.md" target="_blank">Read Repo Plan</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/THE_DRUGFLUENCER_Git_Repo_Plan.md', 'Git Repository Plan'); return false;">Read</a>
                     </div>
 
                     <div class="card">
-                        <h4>Git Plan (Chat Files)</h4>
+                        <h4>Git Plan<br>Alt Version</h4>
                         <p>Alternative version from chat-files-2 with additional development notes.</p>
-                        <a href="Drugfluencer-docs/chat-files-2/Git_Repo_Plan.md" target="_blank">Read Alt Plan</a>
+                        <a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Git_Repo_Plan.md', 'Git Plan Alt'); return false;">Read</a>
                     </div>
 
                     <div class="card">
-                        <h4>Original Claude Chat</h4>
+                        <h4>Original<br>Claude Chat</h4>
                         <p>The original conversation that started it all. Full development history and creative process.</p>
-                        <a href="Drugfluencer-docs/Screenplay about drug-positive influencer - Claude.html" target="_blank">View Original Chat</a>
+                        <a href="Drugfluencer-docs/Screenplay about drug-positive influencer - Claude.html" target="_blank">View</a>
                     </div>
                 </div>
             </section>
 
             <section id="all-files">
-                <h2>📁 Complete File Directory</h2>
+                <h2>Complete File<br>Directory</h2>
 
                 <div class="file-list">
                     <h3>Screenplays & Scripts</h3>
                     <ul>
-                        <li><a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay-v1.txt"><span class="file-icon"></span>the_drugfluencer_screenplay-v1.txt</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay.fountain"><span class="file-icon"></span>the_drugfluencer_screenplay.fountain</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Scripts/the_drugfluencer_screenplay-v1.txt"><span class="file-icon"></span>Scripts/the_drugfluencer_screenplay-v1.txt (duplicate)</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Scripts/Short_47_Seconds.md"><span class="file-icon"></span>Scripts/Short_47_Seconds.md</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Scripts/Short_Film_47_Seconds.md"><span class="file-icon"></span>Scripts/Short_Film_47_Seconds.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay-v1.txt', 'Feature Screenplay v1'); return false;"><span class="file-icon"></span>the_drugfluencer_screenplay-v1.txt</a></li>
+                        <li><a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_screenplay.fountain" download><span class="file-icon"></span>the_drugfluencer_screenplay.fountain</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Scripts/Short_47_Seconds.md', '47 Seconds'); return false;"><span class="file-icon"></span>Scripts/Short_47_Seconds.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Scripts/Short_Film_47_Seconds.md', '47 Seconds Alt'); return false;"><span class="file-icon"></span>Scripts/Short_Film_47_Seconds.md</a></li>
                     </ul>
 
                     <h3>Novellas & Stories</h3>
                     <ul>
-                        <li><a href="Drugfluencer-docs/chat-files-1/the_drugfluencer_novella.txt"><span class="file-icon"></span>the_drugfluencer_novella.txt</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Novellas/the_drugfluencer_novella.txt"><span class="file-icon"></span>Novellas/the_drugfluencer_novella.txt (duplicate)</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Story.md"><span class="file-icon"></span>Novellas/THE_DIARY_New_Yorker_Story.md</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Full_Length.md"><span class="file-icon"></span>Novellas/THE_DIARY_New_Yorker_Full_Length.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-1/the_drugfluencer_novella.txt', 'The Novella'); return false;"><span class="file-icon"></span>the_drugfluencer_novella.txt</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Story.md', 'The Diary - Short'); return false;"><span class="file-icon"></span>Novellas/THE_DIARY_New_Yorker_Story.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Novellas/THE_DIARY_New_Yorker_Full_Length.md', 'The Diary - Full'); return false;"><span class="file-icon"></span>Novellas/THE_DIARY_New_Yorker_Full_Length.md</a></li>
                     </ul>
 
                     <h3>Interactive & Game Design</h3>
                     <ul>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Choose_Your_Own_Adventure.md"><span class="file-icon"></span>Choose_Your_Own_Adventure.md</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Decision_Points.md"><span class="file-icon"></span>Decision_Points.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Choose_Your_Own_Adventure.md', 'CYOA'); return false;"><span class="file-icon"></span>Choose_Your_Own_Adventure.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Decision_Points.md', 'Decision Points'); return false;"><span class="file-icon"></span>Decision_Points.md</a></li>
                     </ul>
 
                     <h3>Plot & Structure</h3>
                     <ul>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Plot_Map.md"><span class="file-icon"></span>Plot_Map.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Plot_Map.md', 'Plot Map'); return false;"><span class="file-icon"></span>Plot_Map.md</a></li>
                     </ul>
 
                     <h3>Visual & Storyboards</h3>
                     <ul>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts.md"><span class="file-icon"></span>Storyboard_Prompts.md</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Cinematic.md"><span class="file-icon"></span>Storyboard_Prompts_Cinematic.md</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Nihonga.md"><span class="file-icon"></span>Storyboard_Prompts_Nihonga.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts.md', 'Storyboard Prompts'); return false;"><span class="file-icon"></span>Storyboard_Prompts.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Cinematic.md', 'Cinematic Prompts'); return false;"><span class="file-icon"></span>Storyboard_Prompts_Cinematic.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Storyboard-prompts/THE_DRUGFLUENCER_Storyboard_Prompts_Nihonga.md', 'Nihonga Prompts'); return false;"><span class="file-icon"></span>Storyboard_Prompts_Nihonga.md</a></li>
                     </ul>
 
                     <h3>Planning & Documentation</h3>
                     <ul>
-                        <li><a href="Drugfluencer-docs/THE_DRUGFLUENCER_Git_Repo_Plan.md"><span class="file-icon"></span>THE_DRUGFLUENCER_Git_Repo_Plan.md</a></li>
-                        <li><a href="Drugfluencer-docs/chat-files-2/Git_Repo_Plan.md"><span class="file-icon"></span>Git_Repo_Plan.md</a></li>
-                        <li><a href="Drugfluencer-docs/Screenplay about drug-positive influencer - Claude.html"><span class="file-icon"></span>Original Claude Chat.html</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/THE_DRUGFLUENCER_Git_Repo_Plan.md', 'Git Repo Plan'); return false;"><span class="file-icon"></span>THE_DRUGFLUENCER_Git_Repo_Plan.md</a></li>
+                        <li><a href="#" onclick="openContent('Drugfluencer-docs/chat-files-2/Git_Repo_Plan.md', 'Git Plan Alt'); return false;"><span class="file-icon"></span>Git_Repo_Plan.md</a></li>
                     </ul>
                 </div>
             </section>
         </div>
 
         <footer>
-            <p><strong>THE DRUGFLUENCER</strong></p>
-            <p>A multi-format narrative project exploring algorithmic exploitation and distributed complicity</p>
-            <p style="margin-top: 20px; opacity: 0.8;">All content available for review and collaboration</p>
+            <p>THE DRUGFLUENCER</p>
+            <p>A multi-format narrative project exploring</p>
+            <p>algorithmic exploitation and distributed complicity</p>
         </footer>
     </div>
+
+    <script>
+        function openContent(filePath, title) {
+            const panel = document.getElementById('sidePanel');
+            const overlay = document.querySelector('.overlay');
+            const panelTitle = document.getElementById('panelTitle');
+            const panelContent = document.getElementById('panelContent');
+
+            // Show panel and overlay
+            panel.classList.add('open');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Set title
+            panelTitle.textContent = title;
+
+            // Show loading
+            panelContent.innerHTML = '<div class="loading">Loading content...</div>';
+
+            // Fetch and display content
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) throw new Error('File not found');
+                    return response.text();
+                })
+                .then(text => {
+                    // Convert markdown-style content to HTML
+                    let html = text
+                        .replace(/&/g, '&amp;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;')
+                        .replace(/\n/g, '<br>');
+
+                    panelContent.innerHTML = '<pre>' + html + '</pre>';
+                })
+                .catch(error => {
+                    panelContent.innerHTML = '<div class="loading">Error loading content: ' + error.message + '</div>';
+                });
+        }
+
+        function closeSidePanel() {
+            const panel = document.getElementById('sidePanel');
+            const overlay = document.querySelector('.overlay');
+
+            panel.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close panel on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSidePanel();
+            }
+        });
+    </script>
 </body>
 </html>
